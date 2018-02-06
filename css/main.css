@@ -1,5 +1,4 @@
-/* ------------Aside------------- */
-
+/* ---------------------------- General ---------------------------- */
 .container {
   display: flex;
 }
@@ -8,6 +7,17 @@ div {
   flex-direction: column;
   justify-content: center;
 }
+ul {
+  list-style-type: none;
+}
+article ul {
+  list-style-type: square;
+}
+#profile-pic img{
+  border-radius: 50%;
+}
+
+/* ---------------------------- Aside ---------------------------- */
 .flex-aside {
   flex: 1;
   padding: 1rem;
@@ -26,17 +36,8 @@ aside h2 {
 aside section h2:first-child{
   border-bottom: 2px solid white;
 }
-ul {
-  list-style-type: none;
-}
-article ul {
-  list-style-type: square;
-}
-#profile-pic img{
-  border-radius: 50%;
-}
 
-/* ---------------------- MAIN -------------------------- */
+/* ---------------------------- MAIN ---------------------------- */
 .flex-main {
   float: center;
 }
