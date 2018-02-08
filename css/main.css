@@ -2,6 +2,10 @@
 .container {
   display: flex;
 }
+.flex-main {
+  display: flex;
+  width: 1200px;
+   }
 /* ---------------------------- General ---------------------------- */
 
 ul {
@@ -13,14 +17,15 @@ article ul {
 #profile-pic img{
   border-radius: 50%;
 }
+.clear{
+  clear: both;
+}
+h1,
+h2 {
+  text-transform: uppercase;
+}
 
 /* ---------------------------- Aside ---------------------------- */
-.flex-main {
-  flex: 1;
-  padding: 1rem;
-  float: left;
-  width: 1200px;
-   }
 aside{
   background-color: #647087;
   width: 30%;
@@ -38,6 +43,9 @@ aside section h2:first-child{
 }
 
 /* ---------------------------- MAIN ---------------------------- */
+main{
+
+}
 main section > h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -45,15 +53,23 @@ main section > h2 {
 .hero {
   background-color: #8EB6C5;
   box-shadow: 2px 2px 40px 1px #647087 inset;
+  padding: 15% 0;
+  text-align: center;
 }
 .hero h2 {
   color: white;
   border-top: 2px solid white;
-  text-transform: none;
-  letter-spacing: none;
+  letter-spacing: 15px;
+}
+.hero h1 {
+  letter-spacing: 10px;
 }
 .about-me h2 {
   background-color: white;
+}
+.about-me {
+  line-height: 2em;
+  padding: 5px;
 }
 article h3 {
   font-weight: bold;
@@ -66,7 +82,35 @@ article h4 {
 .references {
   display: flex;
   flex-wrap: wrap;
+  background-color: #F7DDC3;
 }
 .references article {
   width: 50%;
+}
+
+/* ---------------------------- Referencias ---------------------------- */
+dt,
+dd {
+  line-height: 1.5em;
+  flex-basis: 40%;
+  margin: 0;
+}
+
+dt {
+  clear: left;
+  width: 30%;
+  float: left;
+  border-top: 1px solid white;
+  font-weight: bolder;
+}
+dd {
+  clear: right;
+  width: 50%;
+  float: left;
+  margin: 0;
+  border-top: 1px solid white;
+}
+dt:last-of-type,
+dd:last-of-type {
+  border-bottom: 1px solid white;
 }
