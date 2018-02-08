@@ -123,3 +123,7 @@ dd:last-of-type {
 .social-item{
   padding: 1.5px;
 }
+.meter {
+  display: block;
+  width: 80%;
+}
