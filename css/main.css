@@ -114,3 +114,12 @@ dt:last-of-type,
 dd:last-of-type {
   border-bottom: 1px solid white;
 }
+
+/* ---------------------------- Icons ---------------------------- */
+.fb::before {
+  content: '\f082';
+  font-family: "Font Awesome 5 Free";
+}
+.social-item{
+  padding: 1.5px;
+}
