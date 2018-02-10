@@ -133,13 +133,18 @@ dd {
 } */
 
 /* ---------------------- Icons ---------------------- */
-.fb::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f02d";
-}
 .social-item::before{
   padding-right: 15px;
 }
+/* .fb::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f02d";
+  <i class="fas fa-camera-retro"></i>
+}
+.tw::before {
+    font-family: "Font Awesome 5 Brands"; content: "\f099";
+} */
+
 
 /* ---------------------- Meter ---------------------- */
 meter {
