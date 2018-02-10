@@ -1,23 +1,14 @@
-/* ---------------------------- Layout ---------------------------- */
-.container {
+/* ------------- Layout --------------- */
+.main-container {
   display: flex;
+  justify-content: space-around;
 }
-.flex-main {
-  display: flex;
-  width: 1200px;
-   }
-/* ---------------------------- General ---------------------------- */
 
+/* ------------- GENERAL -------------- */
 ul {
   list-style-type: none;
 }
-article ul {
-  list-style-type: square;
-}
-#profile-pic img{
-  border-radius: 50%;
-}
-.clear{
+.clear {
   clear: both;
 }
 h1,
@@ -25,105 +16,132 @@ h2 {
   text-transform: uppercase;
 }
 
-/* ---------------------------- Aside ---------------------------- */
-aside{
-  background-color: #647087;
-  width: 30%;
-  margin: 3%;
+/* ------------- ASIDE ---------------- */
+aside {
+  background-color: #1D4166;
+  flex-basis: 30%;
 }
 aside * {
   color: white;
 }
 aside h2 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 aside section h2:first-child{
   border-bottom: 2px solid white;
 }
+#profile-pic img{
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+}
+figure {
+  display: block;
+  margin-left: 35%;
+}
 
-/* ---------------------------- MAIN ---------------------------- */
-main{
-
+/* ------------- MAIN ---------------- */
+main {
+  flex-basis: 60%;
 }
 main section > h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 .hero {
-  background-color: #8EB6C5;
-  box-shadow: 2px 2px 40px 1px #647087 inset;
+  background-color: #0A2B59;
+  box-shadow: 2px 2px 40px 1px #5281A3 inset;
   padding: 15% 0;
   text-align: center;
-}
-.hero h2 {
-  color: white;
-  border-top: 2px solid white;
-  letter-spacing: 15px;
 }
 .hero h1 {
   letter-spacing: 10px;
 }
-.about-me h2 {
-  background-color: white;
+.hero h2 {
+  color: white;
+  border-top: 2px solid white;
+  letter-spacing: 10px;
 }
-.about-me {
+.about-me p {
   line-height: 2em;
+  background-color: #A9BAD6;
   padding: 5px;
 }
-article h3 {
-  font-weight: bold;
-}
+article h3,
 article h4 {
   font-weight: bold;
 }
+article ul {
+  list-style-type: square;
+}
 
-/* ---------------------------- Referencias ---------------------------- */
+/* ------------- References -------------- */
 .references {
   display: flex;
   flex-wrap: wrap;
-  background-color: #F7DDC3;
+  background-color: #A9BAD6;
 }
 .references article {
   width: 50%;
+  text-align: center;
 }
 
-/* ---------------------------- Referencias ---------------------------- */
+/* ----------- DL ----------------------- */
+dl {
+  display: flex;
+  flex-wrap: wrap;
+}
 dt,
 dd {
+  text-align: center;
   line-height: 1.5em;
+  float: left;
+  border-top:  1px solid white;
   flex-basis: 40%;
   margin: 0;
-}
-
-dt {
-  clear: left;
-  width: 30%;
-  float: left;
-  border-top: 1px solid white;
-  font-weight: bolder;
-}
-dd {
-  clear: right;
-  width: 50%;
-  float: left;
-  margin: 0;
-  border-top: 1px solid white;
 }
 dt:last-of-type,
 dd:last-of-type {
   border-bottom: 1px solid white;
 }
+dt {
+  font-weight: bolder;
+}
 
-/* ---------------------------- Icons ---------------------------- */
+/* --------------- Forma tradicional --------------- */
+/* dt {
+  clear: left;
+  width: 30%;
+  font-weight: bolder;
+}
+dd {
+  clear: right;
+  width: 50%;
+  margin: 0;
+} */
+
+/* ---------------------- Icons ---------------------- */
 .fb::before {
-  content: '\f082';
   font-family: "Font Awesome 5 Free";
+  content: "\f02d";
 }
-.social-item{
-  padding: 1.5px;
+.social-item::before{
+  padding-right: 15px;
 }
-.meter {
+
+/* ---------------------- Meter ---------------------- */
+meter {
   display: block;
-  width: 80%;
+  width: 85%;
+}
+meter::-webkit-meter-bar {
+  background : none;
+  background-color : #DFE4F5;
+  box-shadow : 0 5px 5px -5px #333 inset;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: none;
+  background-color: #5281A3;
+  box-shadow: 0 5px 5px -5px #333 inset;
 }
