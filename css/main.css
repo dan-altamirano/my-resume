@@ -162,3 +162,16 @@ meter::-webkit-meter-optimum-value {
   background-color: #5281A3;
   box-shadow: 0 5px 5px -5px #333 inset;
 }
+
+
+@media (max-width: 400px) {
+  main,
+  aside {
+    flex: 100%;
+  }
+  .main-container {
+    width: 400px;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+  }
+}
