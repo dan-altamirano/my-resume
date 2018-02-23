@@ -163,15 +163,27 @@ meter::-webkit-meter-optimum-value {
   box-shadow: 0 5px 5px -5px #333 inset;
 }
 
-
-@media (max-width: 400px) {
+@media (max-width: 1112px) {
+  aside {
+    flex-basis: 36%;
+  }
+  .references article {
+    width: 50%;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
   main,
   aside {
     flex: 100%;
   }
   .main-container {
-    width: 400px;
+    width: 100%;
     flex-wrap: wrap;
     font-size: 1.2em;
+  }
+  .references article {
+    width: 80%;
+    text-align: center;
   }
 }
