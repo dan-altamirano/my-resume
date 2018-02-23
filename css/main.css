@@ -175,6 +175,14 @@ meter:-moz-meter-optimum::-moz-meter-bar {
   box-shadow: 0 5px 5px -5px #333 inset;
 }
 
+@media (min-width: 1920px) {
+  .main-container {
+    font-size: 2em;
+  }
+  #contact {
+    font-size: .8em;
+  }
+}
 @media (max-width: 1112px) {
   aside {
     flex-basis: 36%;
@@ -189,13 +197,15 @@ meter:-moz-meter-optimum::-moz-meter-bar {
   aside {
     flex: 100%;
   }
+  #contact {
+    font-size: .9em;
+  }
   .main-container {
     width: 100%;
     flex-wrap: wrap;
-    font-size: 1.2em;
   }
   .references article {
-    width: 80%;
+    width: 100%;
     text-align: center;
   }
 }
