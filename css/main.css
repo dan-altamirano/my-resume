@@ -195,10 +195,10 @@ meter:-moz-meter-optimum::-moz-meter-bar {
 @media (max-width: 600px) {
   main,
   aside {
-    flex: 100%;
+    flex-basis: 100%;
   }
   #contact {
-    font-size: .9em;
+    font-size: 0.2em;
   }
   .main-container {
     width: 100%;
@@ -207,5 +207,15 @@ meter:-moz-meter-optimum::-moz-meter-bar {
   .references article {
     width: 100%;
     text-align: center;
+  }
+}
+@media (width: 300px) {
+  main,
+  aside {
+    flex-basis: 100%;
+    font-size: 0.8em;
+  }
+  #contact {
+    font-size: 0.2em;
   }
 }

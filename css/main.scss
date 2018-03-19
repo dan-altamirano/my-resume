@@ -1,0 +1,222 @@
+//-------------------- Variables -----------------------------------------
+$font-stack: helvetica, sans-serif;
+$color-blue: #0A2B59;
+$color-darkblue: #072042;
+$color-ldarkblue: #1D4166;
+$color-lightblue: #5281A3;
+$color-kindofblue: #A9BAD6;
+$color-kindofwhite: #DFE4F5;
+
+//-------------------- Mixin ---------------------------------------------
+@mixin metervalues {
+  background : #eee;
+  background-color : $color-kindofwhite;
+  box-shadow : 0 5px 5px -5px #333 inset;
+}
+@mixin metoptimum {
+  background: none;
+  background-color: $color-lightblue;
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+@mixin bigphone {
+  main,
+  aside {
+    flex-basis: 100%;
+  }
+  #contact {
+    font-size: 0.2em;
+  }
+  .main-container {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .references article {
+    width: 100%;
+    text-align: center;
+  }
+}
+@mixin phone {
+  main,
+  aside {
+    flex-basis: 100%;
+    font-size: 0.8em;
+  }
+  #contact {
+    font-size: 0.2em;
+  }
+}
+@mixin ipad {
+  aside {
+    flex-basis: 36%;
+  }
+  .references article {
+    width: 50%;
+    text-align: center;
+  }
+}
+@mixin tv {
+  .main-container {
+    font-size: 2em;
+  }
+  #contact {
+    font-size: .8em;
+  }
+}
+
+//-------------------- Layout --------------------------------------------
+* {
+  font-family: $font-stack;
+}
+.main-container {
+  display: flex;
+  justify-content: space-around;
+}
+//-------------------- General ------------------------------------------
+ul {
+  list-style-type: none;
+}
+.clear {
+  clear: both;
+}
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+//-------------------- Aside --------------------------------------------
+aside {
+  background-color: $color-blue;
+  flex-basis: 30%;
+}
+aside * {
+  color: $color-kindofwhite;
+}
+aside h2 {
+  letter-spacing: 5px;
+}
+aside section h2:first-child{
+  border-bottom: 2px solid $color-kindofwhite;
+}
+#profile-pic img{
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+}
+#profile-icon img {
+  width: 50px;
+}
+aside figure {
+  display: block;
+  margin-left: 35%;
+}
+
+//-------------------- Main ---------------------------------------------
+main {
+  flex-basis: 60%;
+  color: $color-darkblue;
+}
+main section > h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.hero {
+  background-color: $color-lightblue;
+  box-shadow: 2px 2px 40px 1px $color-lightblue inset;
+  padding: 15% 0;
+  text-align: center;
+}
+.hero h1 {
+  color: $color-darkblue;
+  letter-spacing: 10px;
+}
+.hero h2 {
+  color: $color-kindofwhite;
+  border-top: 2px solid $color-kindofwhite;
+  letter-spacing: 10px;
+}
+.about-me p {
+  line-height: 2em;
+  background-color: $color-kindofblue;
+  padding: 5px;
+}
+article h3,
+article h4 {
+  font-weight: bold;
+}
+article ul {
+  list-style-type: square;
+}
+
+//-------------------- References ---------------------------------------
+.references {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-kindofblue;
+}
+.references article {
+  width: 50%;
+  text-align: center;
+}
+.reference figure {
+  float: center;
+}
+
+
+//-------------------- DL -----------------------------------------------
+dl {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+dt,
+dd {
+  text-align: center;
+  line-height: 1.5em;
+  float: left;
+  border-top:  1px solid $color-kindofwhite;
+  flex-basis: 45%;
+  margin: 0;
+}
+dt:last-of-type,
+dd:last-of-type {
+  border-bottom: 1px solid $color-kindofwhite;
+}
+dt {
+  font-weight: bolder;
+}
+
+//-------------------- Icons --------------------------------------------
+.social-item::before{
+  padding-right: 15px;
+}
+
+//-------------------- Meter --------------------------------------------
+meter {
+  display: block;
+  width: 85%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+meter::-webkit-meter-bar,
+meter::-moz-meter-bar {
+  @include metervalues;
+}
+meter::-webkit-meter-optimum-value,
+meter:-moz-meter-optimum::-moz-meter-bar {
+  @include metoptimum;
+}
+
+//-------------------- Media --------------------------------------------
+@media (min-width: 1920px) {
+  @include tv;
+}
+@media (max-width: 1112px) {
+  @include ipad;
+}
+@media (max-width: 600px) {
+  @include bigphone;
+}
+@media (width: 300px) {
+  @include phone;
+}
